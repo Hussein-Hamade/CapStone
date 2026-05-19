@@ -15,8 +15,8 @@ def remove_expense(amount: float, category: str) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Track personal expenses.")
-    parser.add_argument("amount", type=float, required=True, help="Amount spent")
-    parser.add_argument("category", required=True, help="Category e.g. food, rent")
+    parser.add_argument("amount", type=float,  help="Amount spent")
+    parser.add_argument("category", type=str ,  help="Category e.g. food, rent")
     parser.add_argument("action", choices=["add", "remove"], type=str, help="can be add or remove expense")
     args = parser.parse_args()
     if args.action == "add":
